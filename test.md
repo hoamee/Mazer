@@ -6,7 +6,7 @@
 ```
 ### import elasticsearch
 ```
-import { Client as EkClient } from "@elastic/elasticsearch";
+import { Client as ElClient } from "@elastic/elasticsearch";
 ```
 ### setup configuration for elasticsearch
 ```
@@ -25,12 +25,12 @@ const searchConfiguration = {
 ### Initialize EL client.  
 *__Client is the main object to working with ElasticSearch__*
 ```
-const ekClient = new EkClient(searchConfiguration)
+const elClient = new ElClient(searchConfiguration)
 ```
 ## Usage
 ### "INSERT" & "UPDATE" Object
 ```
-await ekClient.index({
+await elClient.index({
     index: 'game-of-thrones',
     id: 1,
     document: {
